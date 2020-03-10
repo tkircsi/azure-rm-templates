@@ -5,6 +5,8 @@ az group create --name $RESOURCEGROUP --location $LOCATION
 USERNAME=azureuser
 PASSWORD=$(openssl rand -base64 32)
 DNS_LABEL_PREFIX=mydeployment-$RANDOM
+echo "USERANME: $USERNAME"
+echo "PASSWORD: $PASSWORD"
 
 az group deployment validate \
   --resource-group $RESOURCEGROUP \
